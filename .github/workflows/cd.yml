@@ -35,7 +35,7 @@ jobs:
       - name: Configure Docker for Artifact Registry
         run: gcloud auth configure-docker us-central1-docker.pkg.dev
 
-      - name: Build and push Docker image
+      - name: gcloud builds submit
         run: |
           docker build -t us-central1-docker.pkg.dev/notely-463610/notely-ar-repo/notely:latest .
           docker push us-central1-docker.pkg.dev/notely-463610/notely-ar-repo/notely:latest 
